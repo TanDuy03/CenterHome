@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .form__login{
+            background-color: #ccc;
+            height: 100vh;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .form__input{
+            background-color: #ffffff;
+            width: 25%;
+            height: 400px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .form__input .input_group input{
+            width: 250px;
+            border: 1px solid #ccc;
+            height: 25px;
+            padding: 5px 0 5px 10px;
+            border-radius: 5px;
+            outline: none;
+            margin: 10px;
+        }
+        .form__input .input_group{
+            position: relative;
+        }
+        .form__input .input_group i{
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+        }
+        .form__input h1{
+            color: #0074F0;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .form__input #btnLogin{
+            width: 120px;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-color: #0074F0;
+            border-radius: 5px;
+            color: #ffffff;
+            margin-top: 25px;
+        }
+        .input_group input[type="password"] ~ .fa-eye{
+            display: none;
+        }
+        .input_group input[type="text"] ~ .fa-eye-slash{
+            display: none;
+        }
+        .form__input .input_group #mess{
+            position: absolute;
+            font-size: 14px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form__login">
+        <div class="form__input">
+            <h1>Đăng nhập</h1>
+            <form action="" method="post">
+                <div class="input_group">
+                    <input type="text" placeholder="Tên đăng nhập">
+                </div>
+                <div class="input_group">
+                    <input type="password" placeholder="Mật khẩu" id="password">
+                    <p id="mess">Mật khẩu <span id="strent"></span></p>
+                    <i class="fa-regular fa-eye" onclick="changePass()"></i>
+                    <i class="fa-solid fa-eye-slash" onclick="changePass()"></i>
+                </div>
+                <input type="submit" value="Đăng nhập" id="btnLogin" onclick="checkPass()"></input>
+            </form>
+        </div>
+    </div>
+    <script>
+        let password = document.getElementById("password");
+        let mess = document.getElementById("mess");
+        let strent = document.getElementById("strent");
+        let btnLogin = document.getElementById("btnLogin");
+        function changePass(){
+            password.type = password.type == 'text' ? 'password' : 'text';
+        }
+        // 
+        password.oninput = function (){
+            let point = 0;
+            let value = password.value;
+            if(value.length >= 6){
+                if(/[0-9]/.test(value)){
+                    point = point + 1;
+                    password.style.borderColor = "green";
+                }else{
+                    password.style.borderColor = "red";
+                }
+                if(/[a-z]/.test(value)){
+                    point = point + 1;
+                }
+                if(/[A-Z]/.test(value)){
+                    point = point + 1;
+                }
+                if(/[^0-9a-zA-Z]/.test(value)){
+                    point = point + 1;
+                }
+             
+                // let arrayTest = [
+                //     /[0-9]/,
+                //     /[a-z]/,
+                //     /[A-Z]/,
+                //     /[^0-9a-zA-Z]/
+                // ];
+                // arrayTest.forEach(item => {
+                //     if(item.test(value)){
+                //         point +=1;
+                //     }
+                // })
+            }
+        }
+    </script>
+</body>
+</html>

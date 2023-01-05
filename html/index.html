@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Ty Cổ Phần CenterHome</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/tachyons-animate.css">
+</head>
+<body>
+    <div class="wrapper" id="navbar">
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="#"><img src="image/logo150.png" alt=""></a></div>
+                <ul class="links" id="myActive">
+                    <li class="btn_active">
+                        <a href="gioithieu.html" class="desktop-link">Giới thiệu</a>
+                        <input type="checkbox" id="show-features">
+                        <label for="show-features">Giới thiệu</label>
+                        <ul class="subMenu">
+                            <li><a href="#">CÔNG TY CỔ PHẦN CENTERHOME</a></li>
+                            <li><a href="#">TẦM NHÌN, SỨ MỆNH, GIÁ TRỊ CỐT LÕI</a></li>
+                        </ul>
+                    </li>
+                    <li class="btn_active"><a href="duan.html">Dự án</a></li>
+                    <li class="btn_active"><a href="quanhedautu.html">Quan hệ đầu tư</a></li>
+                    <li class="btn_active">
+                        <a href="tintuc.html" class="desktop-link">Tin tức</a>
+                        <input type="checkbox" id="show-services">
+                        <label for="show-services">Tin tức</label>
+                        <ul class="subMenu">
+                            <li><a href="#">Thị trường BĐS </a></li>
+                            <li><a href="#">Tin nội bộ</a></li>
+                        </ul>
+                    </li>
+                    <li class="btn_active"><a href="thuvien.html">Thư viện</a></li>
+                    <li class="btn_active">
+                        <a href="tuyendung.html" class="desktop-link">Tuyển dụng</a>
+                        <input type="checkbox" id="show-job">
+                        <label for="show-job">Tuyển dụng</label>
+                        <ul class="subMenu">
+                            <li><a href="#">Tuyển dụng Digital Marketing</a></li>
+                            <li><a href="#">Tuyển 20 nhân viên kinh doanh & quản lý</a></li>
+                            <li><a href="#">Tuyển dụng Lễ Tân Kiêm Hành Chánh</a></li>
+                        </ul>
+                    </li>
+                    <li class="btn_active"><a href="lienhe.html">Liên hệ</a></li>
+                </ul>
+            </div>                
+            <label for="show-search" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Tìm kiếm tại đây..." required>
+                <button type="submit" class="go-icon"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+        </nav>
+        <script>
+            var activehd = document.getElementById("myActive");
+            var btn_active = activehd.getElementsByClassName("btn_active");
+            for (var i = 0; i < btn_active.length; i++) {
+                btn_active[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active_hd");
+                if (current.length > 0) { 
+                    current[0].className = current[0].className.replace(" active_hd", "");
+                }
+                this.className += " active_hd";
+                });
+            }
+        </script>
+    </div>
+    <div style="clear: both;"></div>
+
+    <!-- -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="image/bgimg.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="image/bgimg2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="image/slide.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev btn__slide" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next btn__slide" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- -->
+
+    <div class="about-home">
+        <header class="container__hd header active" id="home">
+            <div class="header-content">
+                <div class="left-header">
+                    <div class="h-shape"></div>
+                    <div class="image">
+                        <img src="image/86-2650_210x170.jpg" alt="">
+                    </div>
+                </div>
+                <div class="right-header">
+                    <h1 class="name" style="font-size: 30px;">
+                        <span>CÔNG TY CỔ PHẦN CENTERHOME</span>
+                    </h1>
+                    <p>
+                        CENTERHOME là thương hiệu phát triển bất động sản uy tín
+                        và chuyên nghiệp, có trụ sở chính tại Tp. Hồ Chí Minh, với
+                        đa dạng các loại hình sản phẩm kinh doanh, bao gồm: đất nền,
+                        biệt thự, căn hộ và khu nghỉ dưỡng. Với mong muốn mang đến “sự
+                        bền vững ngành bất động sản Việt Nam”, CENTERHOME luôn cam kết 
+                        đưa ra thị trường những sản phẩm bất động đáng đầu tư, có giá 
+                        trị sinh lợi cao bằng các dịch vụ tốt nhất.
+                    </p>
+                    <div class="btn-con">
+                        <a href="#" target="_blank" class="main-btn">
+                            <span class="btn-text">Xem thêm</span>
+                            <span class="btn-icon"><i class="fas fa-angle-down"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>    
+    </div>
+    <!--  -->
+
+    <div class="container">
+        <div class="row d-flex justify-content-center parent">
+            <span>DỰ ÁN CỦA CENTERHOME</span>
+        </div>
+        <div class="row">
+            <div class="col-sm text-center  image__duan">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm desc__text">
+              <p>Chúng tôi trân trọng cảm ơn quý khách hàng đã tin tưởng
+                 và đồng hành cùng Center Home trong khoảng thời gian qua !</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm image-duan animated fadeInUp ease-out-circ">
+                <img src="image/img5443-2020.jpg" alt="">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center parent1">
+            <a href="#">KHU DÂN CƯ CAO CẤP CENTERHOME RIVERSIDE</a>
+        </div>
+        <div class="row d-flex justify-content-center btn__all">
+            <a href="#">
+                <button>XEM TẤT CẢ</button>
+            </a>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <div class="slide__new">
+        <div class="row d-flex justify-content-center parent">
+            <span>DỰ ÁN CỦA CENTERHOME</span>
+        </div>
+        <div class="row">
+            <div class="col-sm text-center  image__duan">
+            </div>
+        </div>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="image/0f1429c90bdcf682afcd-1634.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Cú hích TP.Thủ Đức sẽ khuấy động bất động sản khu Đông</h2>
+                            <p class="description">
+                                Trao đổi với VnExpress, ông Lê Hoàng Châu cho biết TP Thủ Đức sẽ là động lực lớn cho thị trường địa ốc TP HCM.
+                            </p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="image/4c2e4a76c7bf3fe166ae-2775.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Thành lập TP.Thủ Đức</h2>
+                            <p class="description">
+                                Uỷ ban thường vụ Quốc hội giải thể Tòa án nhân dân, Viện kiểm sát nhân dân Quận 2, Quận 9 và quận Thủ Đức.
+                            </p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/thumbthanhphophiadongogjn-7178.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Thành phố Thủ Đức có quy mô cỡ nào?</h2>
+                            <p class="description">TTO - Ủy ban Thường vụ Quốc hội vừa thông qua nghị quyết về 'sắp xếp các đơn vị hành chính.</p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/0f1429c90bdcf682afcd-1634.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Khan hiếm đất nền thành phố phía Đông</h2>
+                            <p class="description">Khu dân cư Centerhome Riverside có vị trí cửa ngõ phía Đông Sài Gòn, với hạ tầng phát triển, dễ dàng kết nối các khu vực trung tâm.</p>
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/2d6d03e1dde525bb7cf41349-9813.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Đề xuất công nhận TP.Thủ Đức là đô thị loại 1</h2>
+                            <p class="description">Nội dung này được chính quyền TP HCM đề cập trong tờ trình vừa gửi Thủ tướng, Bộ Xây dựng và Bộ Nội vụ.</p>
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/0f1429c90bdcf682afcd-1634.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Khan hiếm đất nền thành phố phía Đông</h2>
+                            <p class="description">Khu dân cư Centerhome Riverside có vị trí cửa ngõ phía Đông Sài Gòn, với hạ tầng phát triển, dễ dàng kết nối các khu vực trung tâm.</p>
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/thumbthanhphophiadongogjn-7178.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Thành phố Thủ Đức có quy mô cỡ nào?</h2>
+                            <p class="description">TTO - Ủy ban Thường vụ Quốc hội vừa thông qua nghị quyết về 'sắp xếp các đơn vị hành chính cấp huyện.</p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://centerhome.vn/thumb/290x250/1/upload/baiviet/thumbthanhphophiadongogjn-7178.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Thành phố Thủ Đức có quy mô cỡ nào?</h2>
+                            <p class="description">TTO - Ủy ban Thường vụ Quốc hội vừa thông qua nghị quyết về 'sắp xếp các đơn vị hành chính cấp huyện.</p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="image/0f1429c90bdcf682afcd-1634.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Cú hích TP.Thủ Đức sẽ khuấy động bất động sản khu Đông</h2>
+                            <p class="description">
+                                Trao đổi với VnExpress, ông Lê Hoàng Châu, Chủ tịch Hiệp hội Bất động sản TP HCM cho biết, TP Thủ Đức sẽ là động lực lớn.
+                            </p>
+
+                            <button class="button">Xem thêm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <div class="wrapper_doitac container">
+        <div class="row d-flex justify-content-center parent">
+            <span>ĐỐI TÁC CỦA CHÚNG TÔI</span>
+        </div>
+        <div class="row">
+            <div class="col-sm text-center  image__duan">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+              <p style="text-align: center;">Chúng tôi trân trọng cảm ơn quý khách hàng đã tin tưởng
+                 và đồng hành cùng Center Home trong khoảng thời gian qua !</p>
+            </div>
+        </div>
+        <div class="bank_doitac">
+            <div class="image_bank">
+                <img src="image/doi_tac/da_bank.png" alt="">
+            </div>
+            <div class="image_bank">
+                <img src="image/doi_tac/vib_bank.png" alt="">
+            </div>
+            <div class="image_bank">
+                <img src="image/doi_tac/tech_bank.png" alt="">
+            </div>
+            <div class="image_bank">
+                <img src="image/doi_tac/hsbc_bank.png" alt="">
+            </div>
+            <div class="image_bank">
+                <img src="image/doi_tac/exi_bank.png" alt="">
+            </div>
+            <div class="image_bank">
+                <img src="image/doi_tac/gp_banl.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <footer>
+        <div class="infor_center">
+            <div class="box1">
+                <i class="fa-solid fa-phone"></i>
+                <div class="infor_content">
+                    <span>Phòng kinh doanh</span>
+                    <h5>0866 146 179</h5>
+                </div>
+            </div>
+            <div class="box1">
+                <i class="fa-solid fa-phone"></i>
+                <div class="infor_content">
+                    <span>Chăm sóc khách hàng</span>
+                    <h5>0866 146 179</h5>
+                </div>
+            </div>
+            <div class="box1">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="infor_content">
+                    <span>Email hỗ trợ</span>
+                    <h5>info@centerhome.vn</h5>
+                </div>
+            </div>
+        </div>
+        <div class="contact_center">
+            <div class="contact_box">
+                <h5>THÔNG TIN LIÊN HỆ</h5>
+                <div class="contact_content">
+                    <p>CÔNG TY CỔ PHẦN CENTERHOME</p>
+                    <p>Trụ sở chính: Số 232 Đỗ Xuân Hợp, Phường Phước Long A, Quận 9, Thành phố Hồ Chí Minh</p>
+                    <p>Mail: info@centerhome.vn</p>
+                    <p>Web: www.centerhome.vn</p>
+                    <div class="contact_follow">
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-viber"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_box">
+                <h5>KẾT NỐI CENTERHOME</h5>
+                <div class="contact_content1">
+                    <p><a href="#">Về Centerhome</a></p> <br>
+                    <p><a href="#">Dự án sắp mở bán</a></p> <br>
+                    <p><a href="#">Tuyển dụng</a></p> <br>
+                    <p><a href="#">Liên hệ</a></p>
+                </div>
+            </div>
+            <div class="contact_box">
+                <h5>TRANG CENTERHOME</h5>
+                <div class="contact_fanpage">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcenterhome.vn%2F&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=428743049044340"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" class="link_fb"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  -->
+    <div class="footer_end">
+        <div class="column_start edn">
+            <span>
+                Copyright  &copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved <a href="https://www.facebook.com/centerhome.vn/" target="_blank" style="color: #ED913E; font-weight:400;"> Center Home</a>
+            </span>
+        </div>
+        <div class="column_end edn">
+            <li class="tk_online" style="color: #777777;">Đang online: <span style="color: #ffffff;">1</span></li>
+        </div>
+        <div class="column_main edn">
+            <li class="luot_truycap" style="color: #777777;">Tổng truy cập: <span style="color: #ffffff;">2</span></li>
+        </div>
+    </div>
+  
+    <!--  -->
+    <script src="JS/scroll.js"></script>   
+    <script src="JS/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

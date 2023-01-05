@@ -1,0 +1,155 @@
+
+:root{
+    --color1: #23527c;
+    --colortext: #016f86;
+}
+
+.main_header ul{
+    display: flex;
+    height: 50px;
+    background-color: #ececec;
+    line-height: 50px;
+    padding-left: 20px;
+    max-width: 1200px;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+.main_header ul li{
+    list-style: none;
+    font-size: 14px;
+}
+.main_duan a:hover{
+    text-decoration: none;
+}
+.main_about span,
+.main_intro span{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--colortext);
+}
+.main_about .image__duan{
+  background-image: url(../image/title_gt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 30px;
+}
+.main_image{
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+.main_image img{
+    width: 100%;
+}
+.main_duan .parent{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.main_duan .parent a span:hover{
+    color: rgb(255,176,1);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+/* Style gioi thieu */
+.main_intro{
+    width: 100%;
+    margin: 25px auto;
+}
+
+.intro_list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+.intro_item{
+    flex-basis: 25%;
+    width: 100%;
+    box-shadow: 5px 10px 20px #ccc;
+    margin: 20px;
+    border-radius: 5px;
+}
+.intro_item img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.intro_item h6{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: var(--colortext);
+}
+.date_intro span{
+    font-size: 15px;
+    color: #cccccc;
+}
+.date_intro{
+    font-size: 15px;
+    color: #333333;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.intro_item .content{
+    padding: 20px;
+}
+.des_intro span{
+    font-size: 14px;
+    color: #333333;
+}
+
+@media screen and (max-width: 1000px){
+    .intro_list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        
+    }
+    .intro_item{
+        margin: 0;
+    }
+
+}
+@media screen and (max-width: 800px){
+    .intro_list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        
+    }
+    .intro_item{
+        margin: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .intro_list{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        
+    }
+    .intro_item{
+        margin: 0;
+    }
+
+}
+
+.list_dautu{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*  */

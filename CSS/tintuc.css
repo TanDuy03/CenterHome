@@ -1,0 +1,126 @@
+.main_duan .list_new{
+    display: flex;
+    flex-wrap: wrap;
+    --space:25px;
+    --column:4;
+    padding: 20px;
+    margin-left: calc(-1 * var(--space));
+}
+.list_new .item_new{
+    margin-left: var(--space);
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(calc(100% / var(--column)) - var(--space));
+    margin-bottom: var(--space);
+}
+.item_new img{
+    width: 100%;
+    height: 200px;
+    flex-shrink: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    flex-shrink: 0;
+}
+.content_new h3{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.content_new p{
+    text-align: justify;
+    font-size: 14px;
+    padding: 0 10px;
+    word-break: break-all;
+    overflow: hidden;
+}
+.content_new h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.item_new .date_new{
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+
+}
+.item_new{
+    display: flex;
+    flex-direction: column;
+}
+.content_new{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.des_new{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: auto;
+}
+.date_new{
+    display: flex ;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.date_new p{
+    margin-top: 10px;
+    padding: 20px 10px;
+    line-height: 50px;
+}
+
+@media screen and (max-width: 1023.98px) {
+    .main_duan .list_new{
+        --space:25px;
+        --column:3;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .main_duan .list_new{
+        --column:2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main_duan .list_new{
+        --column:1;
+    }
+}
+
+.panigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panigation .list_Page{
+    list-style: none;
+    display: flex;
+    margin-bottom: 30px;
+}
+.list_Page li{
+    width: 40px;
+    height: 40px;
+    background-color: #ececec;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #4778BA;
+    font-weight: 300;
+    font-size: 18px;
+}
+.list_Page li.active,
+.list_Page li:hover{
+    background-color: #4778BA;
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+/* 4778BA */

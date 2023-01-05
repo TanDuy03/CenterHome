@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-blue: #0069D9;
+}
+
+.form__login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    height: 100vh;
+    width: 100%;
+}
+.form__login .form__input h1{
+    color: var(--color-blue);
+    margin: 50px 0 50px 0;
+    font-size: 25px;
+}
+.form__input{
+    background-color: #ffffff;
+    width: 350px;
+    height: 380px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form__input .form-group input{
+    width: 90%;
+}
+
+.form__input .form-group:last-child input{
+    background-color: var(--color-blue);
+    color: #ffffff;
+}
+.form__input form .form-group{
+    display: flex;
+    justify-content: center;
+}
+.form__login .form__input{
+    position: relative;
+}
+.form__login .form__input .form-group i{
+    position: absolute;
+    right: 30px;
+    transform: translateY(70%);
+    transition: 0.5s;
+}
+.form__input .form-group input[type="password"] ~ .fa-eye{
+    display: none;
+}
+.form__input .form-group input[type="text"] ~ .fa-eye-slash{
+    display: none;
+}
+.form__input .form-group {
+    position: relative;
+}
+.form__input .form-group #mess{
+    position: absolute;
+    top: 40px;
+    font-size: 14px;
+    left: 20px;
+    display: none;
+}
+.form__input .form-group #btnLogin{
+    margin-top: 25px;
+}
+
+#quen_pass a:hover{
+    text-decoration: none;
+    color: #ff0000;
+}
+@media screen and (max-width: 400px){
+    .form__input{
+        margin: 0 15px;
+    }
+}
+
